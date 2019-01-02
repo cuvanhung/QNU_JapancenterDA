@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "schedule",
+  "collectionName": "",
   "info": {
     "name": "schedule",
     "description": "It's contain schedule for all classes"
