@@ -3,7 +3,7 @@
   "collectionName": "course",
   "info": {
     "name": "course",
-    "description": ""
+    "description": "Create course model"
   },
   "options": {
     "timestamps": true
@@ -11,7 +11,8 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Slug": {
       "default": "",
@@ -19,55 +20,72 @@
     },
     "Skill": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "TotalTime": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Time": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Fee": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Location": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "JapaneseName": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "JapaneseSkill": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "JapaneseTotalTime": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "JapaneseTime": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "JapaneseFee": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "JapaneseLocation": {
       "default": "",
-      "type": "text"
-    },
-    "categories": {
-      "model": "categories",
-      "via": "courses"
+      "type": "text",
+      "required": true
     },
     "Openday": {
       "default": "",
       "type": "string"
+    },
+    "File_Upload": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "categories": {
+      "model": "categories",
+      "via": "courses"
     }
   }
 }

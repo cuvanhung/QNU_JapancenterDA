@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "academic",
+  "info": {
+    "name": "academic",
+    "description": "create academic model"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Class_Name": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "Dead_Line": {
+      "default": "",
+      "type": "text"
+    },
+    "Exam_Date": {
+      "default": "",
+      "type": "string"
+    },
+    "Level": {
+      "default": "",
+      "type": "string"
+    },
+    "File_Upload": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

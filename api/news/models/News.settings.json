@@ -3,7 +3,7 @@
   "collectionName": "news",
   "info": {
     "name": "news",
-    "description": "create News models"
+    "description": ""
   },
   "options": {
     "timestamps": true
@@ -11,62 +11,36 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Slug": {
       "default": "",
       "type": "string"
     },
-    "Time": {
-      "default": "",
-      "type": "text"
-    },
-    "Location": {
-      "default": "",
-      "type": "text"
-    },
-    "Object": {
-      "default": "",
-      "type": "text"
-    },
-    "Program": {
-      "default": "",
-      "type": "text"
-    },
     "Content": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Japanese_Name": {
       "default": "",
-      "type": "string"
-    },
-    "Japanese_Time": {
-      "default": "",
-      "type": "text"
-    },
-    "Japanese_Location": {
-      "default": "",
-      "type": "text"
-    },
-    "Japanese_Object": {
-      "default": "",
-      "type": "text"
-    },
-    "Japanese_Program": {
-      "default": "",
-      "type": "text"
+      "type": "string",
+      "required": true
     },
     "Japanese_Content": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
-    "categories": {
-      "model": "categories",
-      "via": "news"
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
     },
     "Status": {
-      "default": "",
+      "default": "Pending",
       "type": "enumeration",
       "enum": [
         "Draft",
@@ -75,11 +49,19 @@
         "Trash"
       ]
     },
-    "Thumbnai": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
+    "Object": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "Object_Japanese": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "categories": {
+      "model": "categories",
+      "via": "news"
     }
   }
 }

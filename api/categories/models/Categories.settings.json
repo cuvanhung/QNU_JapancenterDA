@@ -11,15 +11,18 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Slug": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Japanese_Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Image": {
       "model": "file",
@@ -31,6 +34,9 @@
       "model": "contents",
       "via": "categories"
     },
+    "Parent": {
+      "model": "categories"
+    },
     "courses": {
       "collection": "course",
       "via": "categories"
@@ -38,9 +44,6 @@
     "news": {
       "collection": "news",
       "via": "categories"
-    },
-    "Parent": {
-      "model": "categories"
     }
   }
 }
